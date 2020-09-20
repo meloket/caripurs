@@ -2,9 +2,7 @@ import sys
 import json
 from django.apps import AppConfig
 
-import os
-from django.conf import settings
-from .models import Message
+
 
 from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNStatusCategory
@@ -19,7 +17,9 @@ class TaskConfig(AppConfig):
         # if 'runserver' not in sys.argv:
         #     return True
 
-
+        import os
+        from django.conf import settings
+        from .models import Message
 
 
         ENTRY = "Earth"
